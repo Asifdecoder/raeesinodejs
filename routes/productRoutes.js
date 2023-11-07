@@ -29,6 +29,17 @@ router.get("/", (req, res) => {
 router.get("/signup", (req, res) => {
   res.render("signup");
 });
+router.get('/return-policy',(req,res)=>{
+  res.render('return')
+})
+router.get('/shipping-policy',(req,res)=>{
+
+  res.render('shipping')
+})
+router.get('/terms-of-use',(req,res)=>{
+
+  res.render('termsofuse')
+})
 
 // router.post("/signup", async (req, res) => {
 // <<---saving data and using bcrypt to hash the function--->

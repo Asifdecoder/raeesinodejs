@@ -68,7 +68,7 @@ passport.use(
     {
       clientID: process.env.CLIENT_ID,
       clientSecret: process.env.CLIENT_SECRET,
-      callbackURL: "http://localhost:8081/auth/google/secrets",
+      callbackURL: "https://raeesi.in/auth/google/secrets",
       // profileFields: ['id', 'displayName', 'photos', 'email']
     },
 
@@ -132,7 +132,7 @@ passport.use(
     {
       clientID: process.env.APP_ID,
       clientSecret: process.env.APP_SECRET,
-      callbackURL: "http://localhost:8081/auth/facebook/callback",
+      callbackURL: "https://raeesi.in/auth/facebook/callback",
       profileFields: ["id", "displayName", "photos", "email"],
     },
     function (accessToken, refreshToken, profile, cb) {

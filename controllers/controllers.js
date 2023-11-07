@@ -58,8 +58,9 @@ async function handleUserLogin(req,res) {
 
   // check if email and password exists in the db
 
+  
   const normalPassword = bcrypt.compareSync(password, foundUser.password);
-
+  
   if (foundUser.email && normalPassword) {
     let token = jwt.sign(
       {
