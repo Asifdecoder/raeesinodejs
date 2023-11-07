@@ -1,0 +1,31 @@
+<%- include('./partials/header.ejs') %> <%- include('./partials/navbar') %>
+
+<div class="parentcontact">
+  <div class="contactus">
+    <p>CLIENT SUPPORT IS AVAILABLE</p>
+
+    <p>MONDAY THROUGH FRIDAY</p>
+    <p>10 AM TO 6 PM</p>
+    <p>CLOSED ON ALL MAJOR US HOLIDAYS</p>
+    <p>REACH US AT SUPPORT@AMIRI.COM OR USE THE FORM BELOW</p>
+
+    <div class="wrapper">
+      <form id="signup" method="post" action="/signup/new">
+        <h2>Please fill the below form for any query</h2>
+        <h2>Expect a resolution within 24hrs</h2>
+
+        <!-- <label for="username">Username</label>
+                <input name="username" type="text">  -->
+        <label for="name">Name</label>
+        <input name="name" type="text" />
+        <label for="email">Email</label>
+        <input required name="email" type="email" />
+        <label for="query">Please share your query</label>
+
+        <textarea name="query" id="" cols="30" rows="6"></textarea>
+
+        <button type="submit">Submit</button>
+      </form>
+    </div>
+  </div>
+</div>

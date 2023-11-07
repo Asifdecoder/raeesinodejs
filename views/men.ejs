@@ -1,0 +1,27 @@
+<%- include('./partials/header.ejs') %> <%- include('./partials/navbar.ejs') %>
+<% for(let item of allProducts){ %>
+<div class="parentmentwrapper">
+  <div class="menwrapper">
+    <div class="imgmenouter">
+      <img id="imgmen" src="<%=item.img%>" />
+    </div>
+    <div class="contents">
+      <h1 id="h1men">Name:<%= item.name %></h1>
+
+      <p id="pmen">Price:<%= item.price %></p>
+      <p id="pmen">Description:<%= item.description %></p>
+    </div>
+    <button class="crudbtn"><a href="/men/<%=item._id%>">Show</a></button>
+    <% if (user.role==true) { %>
+     
+      <button class="crudbtn"><a href="/men/<%=item._id%>/edit">Edit</a></button>
+      <button class="crudbtn"><a href="/men/new">Add</a></button>
+  
+      <form action="/men/<%=item._id%>?_method=DELETE" method="post">
+        <button class="crudbtn">Delete</button>
+      </form>
+    <% } %>
+  </div>
+</div>
+
+<% } %> <%- include('./partials/footer.ejs') %>

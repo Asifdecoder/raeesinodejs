@@ -1,0 +1,19 @@
+<%- include('./partials/header.ejs') %> <%- include('./partials/navbar') %>
+
+<div class="wrapper">
+  <form id="signup" method="post" action="/men/<%=findId._id%>?_method=PATCH">
+    <h2>Edit the product of raeesi collection</h2>
+
+    <label for="name">Name of the product</label>
+    <input value="<%=findId.name%>" required name="name" type="text" />
+    <label for="image">Please add link of the product image</label>
+    <input value="<%=findId.img%>" name="img" type="text" />
+    <label for="price">Price</label>
+    <input value="<%=findId.price%>" required name="price" type="number" />
+    <label for="description">Description of the product</label>
+    <input value="<%=findId.description%>" name="description" type="text" />
+    <button type="submit">Submit</button>
+  </form>
+</div>
+
+<%- include('./partials/footer.ejs') %>
